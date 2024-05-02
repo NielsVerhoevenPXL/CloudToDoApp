@@ -13,5 +13,7 @@ RUN npm run build --configuration=production
 
 FROM nginx
 
+EXPOSE 80
+
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/frontend/ /usr/share/nginx/html
