@@ -17,7 +17,7 @@ async function getImageUrlsFromS3Bucket() {
         const images = data.Contents
             .filter(item => item.Size > 0 && item.Key.match(/\.(jpeg|jpg|gif|png)$/i)) 
             .map(item => {
-                const imageUrl = `https://{{bucket_name}}.s3.amazonaws.com/${item.Key}`; 
+                const imageUrl = `https://{{bucket_name}}.s3.us-east-1.amazonaws.com/${item.Key}`; 
                 return { url: imageUrl };
             });
         console.log('Filtered images:', images); // Log the final image array to check URLs
