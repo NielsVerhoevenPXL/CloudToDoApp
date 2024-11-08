@@ -24,7 +24,7 @@ async function getImageUrlsFromS3Bucket() {
         return images;
     } catch (error) {
         console.error('Error fetching images from S3 bucket:', error);
-        return [];
+        return "fetching images failed";
     }
 }
 
