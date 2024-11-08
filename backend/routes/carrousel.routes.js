@@ -2,7 +2,7 @@ const express = require('express');
 const AWS = require('aws-sdk');
 const carrouselRouter = express.Router();
 
-const s3 = new AWS.S3({ region: 'us-east-1' });
+const s3 = new AWS.S3();
 const bucketName = process.env.BUCKET_NAME || 'automation-pe-2-cumbucket';
 
 carrouselRouter.get('', (req, res) => {
