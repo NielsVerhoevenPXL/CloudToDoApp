@@ -8,7 +8,7 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./carrousel.component.css']
 })
 export class CarrouselComponent implements OnInit {
-  images!: CarrouselItem[];
+  images!: string[];
   activeItem: number = 0;
   counter!: any;
   constructor(private todoService: TodoService) { }
