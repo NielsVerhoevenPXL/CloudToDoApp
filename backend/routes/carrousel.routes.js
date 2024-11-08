@@ -16,7 +16,7 @@ carrouselRouter.get('', (req, res) => {
       res.status(500).send('Error fetching images');
     } else {
       const imageUrls = data.Contents.map(item => {
-        return `https://${bucketName}.s3.amazonaws.com/${item.Key}`;
+        return { url: `https://${bucketName}.s3.amazonaws.com/${item.Key}` };
       });
       res.json(imageUrls);
     }

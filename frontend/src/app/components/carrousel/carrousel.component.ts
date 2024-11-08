@@ -8,14 +8,14 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./carrousel.component.css']
 })
 export class CarrouselComponent implements OnInit {
-  images!: string[];
+  images!: CarrouselItem[];
   activeItem: number = 0;
   counter!: any;
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
     this.todoService.getCarrouselItems().subscribe(
-      (data: any) => {
+      (data: CarrouselItem[]) => {
         this.images = data;
       }
     );
@@ -34,4 +34,3 @@ export class CarrouselComponent implements OnInit {
   }
 
 }
-
