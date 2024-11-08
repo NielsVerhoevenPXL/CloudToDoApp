@@ -6,6 +6,7 @@ const s3 = new AWS.S3();
 
 async function getImageUrlsFromS3Bucket() {
     const params = {
+        Bucket: 'automation-pe-2-cumbucket',
         Prefix: 'pictures/'
     };
 
