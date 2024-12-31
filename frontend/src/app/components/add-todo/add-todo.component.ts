@@ -17,7 +17,9 @@ export class AddTodoComponent implements OnInit {
   ngOnInit(): void {
     this.myForm = new UntypedFormGroup({
       title: new UntypedFormControl(''),
-      label: new UntypedFormControl('')
+      label: new UntypedFormControl(''),
+      completed: new UntypedFormControl(false)
+
     });
   }
 
