@@ -10,8 +10,8 @@ Make sure the Lambda has the correct execution role(s)
 */
 export const handler = async(event) => {
     console.log('Received event:', JSON.stringify(event, null, 2));
+    const DYNAMODBTABLENAME = process.env.DYNAMODBTABLENAME;
     
-    const DYNAMODBTABLENAME = 'todo';
     let body;
     let statusCode = '200';
     const headers = {

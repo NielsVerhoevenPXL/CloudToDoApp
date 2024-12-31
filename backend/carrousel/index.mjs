@@ -10,8 +10,7 @@ Function that reads the contents from an S3 bucket and returns all object urls.
   
 export const handler = async(event) => {
     console.log('Received event:', JSON.stringify(event, null, 2));
-    
-    const bucketName = 'images-examen-pe-s3-bucket-2025';
+    const bucketName = process.env.S3_BUCKET_NAME;
     let body;
     let statusCode = '200';
     const headers = {
